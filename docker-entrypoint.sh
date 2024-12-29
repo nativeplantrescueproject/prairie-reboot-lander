@@ -10,4 +10,4 @@ do
   sleep 3
 done
 
-exec gunicorn --bind 0.0.0.0:5000 --forwarded-allow-ips='*' wsgi:app
+exec gunicorn --bind 127.0.0.1:5000 --forwarded-allow-ips='*' --log-level=debug --workers=2 wsgi:app
