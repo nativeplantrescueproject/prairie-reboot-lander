@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+         <!-- Required meta tags -->
+        {% block head %}
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.svg') }}" type="image/png">
+        <!-- CSS -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='css/noscript.css') }}" /></noscript>
+        <!-- JS -->
+        <!-- Flash message timeout -->
+        <script type="text/javascript">
+            window.setTimeout("for (const elem of document.getElementsByClassName('alert')) {elem.style.display = 'none';}", 2000);
+        </script>
+        {% endblock %}
+
+        {% set site_name = "Prairie Reboot" %}
+        {% if title %}
+            <title>{{ site_name }} - {{ title }}</title>
+        {% else %}
+            <title>{{ site_name }}</title>
+        {% endif %}
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-solid fa-sun"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Prairie Reboot</h1>
+							</div>
+						</div>
+						<nav>
+							<ul>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#tools">Tools</a></li>
+                                <li><a href="#monitor">Monitor</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+                        <!-- About -->
+							<article id="about">
+								<h2 class="major">About</h2>
+                                <p>Prairie Reboot is a project within the nonprofit Native Plant Rescue Project (NPRP). For more information, please visit the <a href="https://www.nativeplantrescueproject.org/">NPRP homepage</a>.</p>
+							</article>
+						<!-- Work -->
+							<article id="tools">
+								<h2 class="major">Tools</h2>
+                                <p>Click below to sign in to tools. If you don't have access, reach out to the Admin team.</p>
+								<ul class="actions">
+                                    <li><a href="https://leads.prairiereboot.org" class="button primary">Go to tools</a></li>
+                                </ul>
+							</article>
+
+                            <article id="monitor">
+								<h2 class="major">Monitor</h2>
+                                <p>Click below to sign in to monitoring. If you don't have access, reach out to the Admin team.</p>
+								<ul class="actions">
+                                    <li><a href="https://logs.prairiereboot.org" class="button primary">Go to monitoring</a></li>
+                                </ul>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+                    <footer id="footer">
+                        <p class="copyright">v{{ config['VERSION'] }}</p>
+                        <p class="copyright">&copy;{{ now.year }} NPRP. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                    </footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+	</body>
+</html>

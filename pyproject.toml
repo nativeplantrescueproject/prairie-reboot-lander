@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "preboot_lander"
+version = "0.1.0"
+description = "Landing page for prairie reboot"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = 'preboot_lander' },
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+Flask = "^3"
+gunicorn = "^23"
+Jinja2 = "^3"
+loguru = "^0"
+requests = "^2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

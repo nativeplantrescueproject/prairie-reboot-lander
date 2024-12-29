@@ -1,0 +1,10 @@
+services:
+  preboot_lander:
+    build:
+      context: .
+#      args:
+#        INSTALL_DEBUGPY: "True"
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
